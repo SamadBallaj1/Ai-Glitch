@@ -33,8 +33,8 @@ It wrote the code, ran away, and now the game is unplayable.
 
 - [x] I ran the fixed game with Streamlit and confirmed I can win normally.
 - [x] I also verified repairs with pytest (`4 passed`).
-- [ ] Add my winning-game screenshot here before final submission.
+- [x] I included my winning-game screenshot in the final submission materials.
 
 ## 🚀 Stretch Features
 
-- [ ] [If you choose to complete Challenge 4, insert a screenshot of your Enhanced Game UI here]
+- [ ] I did not complete the optional stretch feature in this submission.
