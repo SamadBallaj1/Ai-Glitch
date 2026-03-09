@@ -25,13 +25,15 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [x] **Game purpose:** The goal is to guess the secret number within the attempt limit for the selected difficulty.
+- [x] **Bugs I found:** Hints were reversed, game state/reset behavior felt inconsistent, and logic in the app file made bugs harder to track.
+- [x] **Fixes I applied:** I moved core logic into `logic_utils.py`, fixed high/low hint behavior, cleaned up reset/state flow, and added test coverage.
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
+- [x] I ran the fixed game with Streamlit and confirmed I can win normally.
+- [x] I also verified repairs with pytest (`4 passed`).
+- [ ] Add my winning-game screenshot here before final submission.
 
 ## 🚀 Stretch Features
 
