@@ -32,9 +32,12 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📸 Demo
 
 - [x] I ran the fixed game with Streamlit and confirmed I can win normally.
-- [x] I also verified repairs with pytest (`4 passed`).
-- [x] I included my winning-game screenshot in the final submission materials.
+- [x] I also verified repairs with pytest (`7 passed`).
+- [ ] Winning game screenshot added.
 
 ## 🚀 Stretch Features
 
-- [ ] I did not complete the optional stretch feature in this submission.
+- [x] Challenge 1 completed: Advanced edge-case testing
+  - Added edge-case tests for negative number input, decimal input, and extremely large input.
+  - Ran pytest to confirm all tests pass.
+  - [ ] Pytest edge-case screenshot added.

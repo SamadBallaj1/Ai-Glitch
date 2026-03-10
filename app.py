@@ -1,6 +1,5 @@
 import random
 import streamlit as st
-# FIX: Refactored helper logic into logic_utils.py with AI help, then reviewed manually.
 from logic_utils import check_guess, get_range_for_difficulty, parse_guess, update_score
 
 st.set_page_config(page_title="Glitchy Guesser", page_icon="🎮")
@@ -29,7 +28,6 @@ st.sidebar.caption(f"Range: {low} to {high}")
 st.sidebar.caption(f"Attempts allowed: {attempt_limit}")
 
 def start_new_game():
-    # FIX: Copilot suggested this reset helper; I kept it simple and verified in app.
     # Reset everything needed for a fresh round.
     st.session_state.secret = random.randint(low, high)
     st.session_state.attempts = 0

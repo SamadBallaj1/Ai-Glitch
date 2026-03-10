@@ -2,25 +2,41 @@
 
 ## 1. What was broken when you started?
 
-The game is supposed to let me guess a secret number and guide me with hints, but it was broken at first. I expected a high guess to say go lower and a low guess to say go higher, but the hints were reversed. I expected New Game to reset cleanly with the right attempts and state, but it sometimes felt off. I expected the same rules every turn, but some rounds behaved inconsistently.
+1) Hints were backwards.
+Expected: if my guess is high, it should say go lower.
+Actual: it told me the opposite direction.
+
+2) Attempts and new game felt buggy.
+Expected: new game should reset cleanly with correct attempts.
+Actual: attempts and game state did not always match what I expected.
+
+3) Some rounds did not make sense.
+Expected: same rules every turn.
+Actual: behavior felt inconsistent on different guesses.
 
 ---
 
 ## 2. How did you use AI as a teammate?
 
-I used Copilot and AI chat while debugging. I used #file:app.py and #file:logic_utils.py so it could see the full context. A correct suggestion was to move helper logic out of app.py into logic_utils.py, and that made the code easier to follow. I verified that by running pytest and by playing the game to make sure the app still worked. One misleading suggestion was to focus only on session state at first, but that missed the reversed hint logic, and I verified that by checking the check_guess code and testing guesses in the app.
+I used Copilot and AI chat while debugging.
+I used #file:app.py and #file:logic_utils.py so Copilot had project context.
+I mostly used it for answers and to explain confusing parts of the code.
+It helped me clean up and move logic out of the main app file.
+I asked Copilot about the backwards hints glitch and it explained the guess check logic was flipped.
 
 ---
 
 ## 3. Debugging and testing your fixes
 
-First I ran the app with Streamlit and used Developer Debug Info to watch what changed after each guess. Then I fixed one issue at a time and re-tested high, low, and exact guesses. I also ran pytest after each major fix, including a new test that checks a too-high guess tells the player to go lower. That combo of manual testing plus pytest is how I confirmed the repairs.
+First I ran the app with Streamlit and played a few rounds.
+Then I opened Developer Debug Info, wrote down glitches, and fixed them one by one.
+After that I tested high, low, and exact guesses, then ran pytest to confirm.
 
 ---
 
 ## 4. What did you learn about Streamlit and state?
 
-Streamlit reruns the script on clicks.
+IT reruns the script on clicks.
 If values are not in session state, they reset.
 That is why the game felt random before the fixes.
 

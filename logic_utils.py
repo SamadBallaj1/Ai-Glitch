@@ -39,8 +39,6 @@ def check_guess(guess, secret):
 
     outcome examples: "Win", "Too High", "Too Low"
     """
-    # FIXME (original bug spot): this block used to give reversed HIGHER/LOWER hints.
-    # FIX: AI suggested the direction logic and I verified with pytest + manual play.
     if guess == secret:
         return "Win", "🎉 Correct!"
     if guess > secret:
